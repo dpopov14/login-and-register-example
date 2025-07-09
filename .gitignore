@@ -3,31 +3,37 @@
 # Java/Spring backend and a JavaScript/Angular frontend.
 # ===================================================================
 
-### IDEs & Editors ###
+
+# ----------------------------
+# IDEs & Editors
+# ----------------------------
 .idea/
-.project
-.classpath
-.factorypath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
 *.iws
 *.iml
 *.ipr
+/backend/.idea/
+/frontend/.idea/
+.project
+.classpath
+.factorypath
+.settings/
+.c9/
+*.launch
+*.sublime-workspace
 
-# STS / Spring
+# Visual Studio Code
+/.vscode/
+!/frontend/.vscode/settings.json
+!/frontend/.vscode/tasks.json
+!/frontend/.vscode/launch.json
+!/frontend/.vscode/extensions.json
+/frontend/.vscode/*
+!.vscode/
+
+# Spring Tools Suite (STS)
 .apt_generated
 .springBeans
 .sts4-cache
-
-# Visual Studio Code
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.history/*
 
 # NetBeans
 /nbproject/private/
@@ -36,45 +42,60 @@
 /.nb-gradle/
 
 
-### Build & Compiled Output ###
 # Java / Maven / Gradle
-/target/
-/build/
-/out/
-!**/src/main/**/build/
-!**/src/test/**/build/
+/backend/target/
+/backend/build/
+/backend/out/
+/backend/.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+!**/src/main/**/build/
+!**/src/test/**/build/
 
-# Frontend
-/dist
-/tmp
-/out-tsc
-/bazel-out
-/.angular/cache
-/coverage
+/LoginAndRegisterExample.iml  # IntelliJ module file
 
+# Angular / Frontend
+/frontend/dist/
+/frontend/tmp/
+/frontend/out-tsc/
+/frontend/bazel-out/
+/frontend/.angular/cache/
+/frontend/coverage/
+/frontend/.sass-cache/
 
-### Dependencies ###
-/node_modules
-# Ignore the Maven Wrapper JAR, as it's downloaded automatically
-.mvn/wrapper/maven-wrapper.jar
+# ----------------------------
+# Dependencies
+# ----------------------------
 
+# Node modules
+/frontend/node_modules/
 
-### Miscellaneous & Logs ###
-# Node
+# ----------------------------
+# Logs / Miscellaneous
+# ----------------------------
+
 npm-debug.log
 yarn-error.log
-
-# Other
+*.log
 /connect.lock
 /libpeerconnection.log
-testem.log
-/typings
-*.log
+/frontend/testem.log
+/frontend/typings
 
+# ----------------------------
+# Environment & OS Files
+# ----------------------------
 
-### Operating System Files ###
+.env
+.env.local
+.env.*.local
+
+# macOS
 .DS_Store
+
+# Windows
 Thumbs.db
-.sass-cache/
+
+# Vim / swap
+*.swp
+*.swo
